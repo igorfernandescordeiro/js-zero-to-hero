@@ -7,4 +7,9 @@ console.log('Hello World');
 // talked about parameters in a function
 //
 
-// Talking about operators
+// Talking about operators and logical operators
+
+//Talked about if else, about looping while, for.. about control flow
+
+// basic functions and thier use in structuring code
+
