@@ -12,9 +12,9 @@ let b = 2;
 
 console.log(a === b);
 
-if ( a === b) {
+if (a === b) {
     console.log('they are equals');
-}else{
+} else {
     console.log('they are not equals');
 }
 
@@ -33,8 +33,8 @@ if (age > 18) {
 
 // 4. Create a for loop that iterates from 0 to 10, but only prints even numbers to the console.
 
-for (let i = 0; i <= 10; i ++) {
-    if( i % 2 === 0){
+for (let i = 0; i <= 10; i++) {
+    if (i % 2 === 0) {
         console.log(`This is an even number: ${i}`);
     };
 };
@@ -42,5 +42,25 @@ for (let i = 0; i <= 10; i ++) {
 
 // 5. Given an array numbers, write a while loop that continues to sum the numbers until the sum is greater than 100, then exits the loop
 
+numbers = [10, 10, 50, 30, 3, 55];
+sum = 0;
+let i = 0;
+
+while (sum <= 100) {
+    sum += numbers[i];
+    i++; 
+};
+
+console.log('value of sum: ' + sum);
+
+
 
 // 6. Define a function named calculateArea that takes two parameters, width and height, and returns the area of a rectangle
+
+function calculateArea(width, height) {
+
+    return width * height;
+
+};
+
+console.log('area of a rectangle: ' + calculateArea(10, 4));
