@@ -96,3 +96,28 @@ console.log(Object.keys(bio));
 
 
 console.log(Object.entries(bio));
+
+//talk about scouping ... local scope and global scope
+
+
+// closures
+// basically a closure in javaScript is formed when a function retains access to the variable count
+// from its outer scope even afeter the function has finished executing, called too data encapsulaton.
+
+//A closure is a function that remembers the scope in which it was created, even after that scope is no longer active. It is useful for encapsulating variables and maintaining state between function calls. It allows access to variables from an external function even after the external function has executed.
+
+function counter() {
+    let count = 0
+
+    return function() {
+        count++;
+        console.log(count);
+    };
+};
+
+let increment = counter();
+
+increment();
+increment();
+increment();
+
