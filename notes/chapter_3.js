@@ -121,3 +121,16 @@ increment();
 increment();
 increment();
 
+// modular and reuseble code
+// talking about export functions.. variables from one file to other... with module.export and require
+
+
+// Handle errors and debugging
+
+function problematicCodeBlock(){
+    const calculation = 100 / null;
+
+    console.log(calculation);
+};
+
+problematicCodeBlock();
