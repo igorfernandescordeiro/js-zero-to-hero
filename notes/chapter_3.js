@@ -3,7 +3,7 @@
 let example_sentence = 'is a string';
 let string_length = example_sentence.length;
 
-console.log('Value at the end of the string = ', example_sentence[string_length -1]);
+console.log('Value at the end of the string = ', example_sentence[string_length - 1]);
 
 
 let contains_the_letter_a = example_sentence.indexOf('a');
@@ -29,7 +29,7 @@ console.log(slice_string);
 
 // talking about arrays and objects
 
-let simple_array = ['igor', 'Fernandes', 'Cordeiro' ];
+let simple_array = ['igor', 'Fernandes', 'Cordeiro'];
 
 //crud - create read update delete
 
@@ -73,10 +73,10 @@ let end_array = simple_array2.slice(index_of_three + 1);
 
 let new_filtered_array = start_array.concat(end_array);
 
- console.log(new_filtered_array);
+console.log(new_filtered_array);
 
 
- // dictionaries or objects
+// dictionaries or objects
 
 const bio = {
     name: 'james',
@@ -109,7 +109,7 @@ console.log(Object.entries(bio));
 function counter() {
     let count = 0
 
-    return function() {
+    return function () {
         count++;
         console.log(count);
     };
@@ -127,10 +127,41 @@ increment();
 
 // Handle errors and debugging
 
-function problematicCodeBlock(){
+function problematicCodeBlock() {
     const calculation = 100 / null;
 
     console.log(calculation);
 };
 
 problematicCodeBlock();
+
+const brokenObject = {
+    word: 'nice'
+};
+
+function problematicCodeBlock2() {
+    try {
+        console.log('Attemped the try block');
+        const sub_object = brokenObject.hello.world;
+        console.log(sub_object);
+    } catch (error) {
+        console.log(error.message);
+    }
+
+};
+
+problematicCodeBlock2();
+
+
+
+function throwError() {
+    try {
+
+        throw new Error('custom error message')
+
+    } catch (error) {
+        console.log(error.message);
+    }
+};
+
+throwError();
