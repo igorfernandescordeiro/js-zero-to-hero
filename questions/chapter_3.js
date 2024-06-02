@@ -1,4 +1,24 @@
 // 1. Array Filtering: Write a function that filters out all the even numbers from an array of integers.
+// My way with some research
+function arrayFiltering(array){
+    return array.filter(number => number %2 !== 0);
+};
+// Professor`s way
+function arrayFilter(arr) { 
+    let new_array = [];
+
+    for ( let i = 0; i < arr.length; i++){
+        if( arr[i] % 2 !== 0) {
+        new_array.push(arr[i]);
+        };
+    };
+    return new_array;
+}
+
+const arrayNumbers = [1, 2, 3, 4, 5, 6, 7];
+
+console.log(arrayFiltering(arrayNumbers));
+console.log(arrayFilter(arrayNumbers));
 
 
 
