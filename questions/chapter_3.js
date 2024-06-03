@@ -25,6 +25,30 @@ console.log(arrayFilter(arrayNumbers));
 //  2. Object Manipulation: Given an array of objects representing people with names and ages, write a function to find the person with the highest age.
 
 
+const people = [
+    {name: 'igor', age: 34},
+    {name: 'isabele', age: 30},
+    {name: 'Tainá', age: 40},
+    {name: 'jhones', age: 37}
+];
+
+function highestAge(array){
+    let age = 0;
+    let oldAge = [];
+    for(let i = 0; i < array.length; i++){
+        if (array[i]['age'] > age){
+            age = array[i]['age'];
+            oldAge = array[i];
+        }
+    }
+    return oldAge;
+};
+
+console.log(people[0]['age']);
+console.log(highestAge(people));
+
+
+
 
 // 3. Data Transformation: Convert an array of strings containing numbers into an array of actual number values.
 
