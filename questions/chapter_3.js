@@ -47,6 +47,35 @@ function highestAge(array){
 console.log(people[0]['age']);
 console.log(highestAge(people));
 
+function highestAge2(array){
+    let age = 0;
+    let oldAge = [];
+    for (const person of people) {
+        if(person['age'] > age){
+            age = person['age'];
+            oldAge = person;
+        }
+    }
+    return oldAge;
+};
+
+console.log(highestAge2(people));
+
+const people2 = [
+    {name: 'igor', age: 34},
+    {name: 'isabele', age: 30},
+    {name: 'Tainá', age: 40},
+    {name: 'jhones', age: 37}
+];
+
+function highestAge3(arr){
+    arr.sort((a, b) =>  b.age - a.age)
+    return arr[0];
+};
+
+
+console.log(highestAge3(people));
+
 
 
 
