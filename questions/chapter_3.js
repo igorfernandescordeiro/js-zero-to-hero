@@ -80,7 +80,8 @@ console.log(highestAge3(people));
 
 
 // 3. Data Transformation: Convert an array of strings containing numbers into an array of actual number values.
-
+const arrayOfStrings = ['1', '2', '3', '4'];
+arrayOfStrings.map();
 
 // 4. Array Sorting: Write a function that sorts an array of objects based on a specific property (e.g., 'price') in ascending order.
 
