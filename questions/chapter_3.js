@@ -1,15 +1,15 @@
 // 1. Array Filtering: Write a function that filters out all the even numbers from an array of integers.
 // My way with some research
-function arrayFiltering(array){
-    return array.filter(number => number %2 !== 0);
+function arrayFiltering(array) {
+    return array.filter(number => number % 2 !== 0);
 };
 // Professor`s way
-function arrayFilter(arr) { 
+function arrayFilter(arr) {
     let new_array = [];
 
-    for ( let i = 0; i < arr.length; i++){
-        if( arr[i] % 2 !== 0) {
-        new_array.push(arr[i]);
+    for (let i = 0; i < arr.length; i++) {
+        if (arr[i] % 2 !== 0) {
+            new_array.push(arr[i]);
         };
     };
     return new_array;
@@ -26,17 +26,17 @@ console.log(arrayFilter(arrayNumbers));
 
 
 const people = [
-    {name: 'igor', age: 34},
-    {name: 'isabele', age: 30},
-    {name: 'Tainá', age: 40},
-    {name: 'jhones', age: 37}
+    { name: 'igor', age: 34 },
+    { name: 'isabele', age: 30 },
+    { name: 'Tainá', age: 40 },
+    { name: 'jhones', age: 37 }
 ];
 
-function highestAge(array){
+function highestAge(array) {
     let age = 0;
     let oldAge = [];
-    for(let i = 0; i < array.length; i++){
-        if (array[i]['age'] > age){
+    for (let i = 0; i < array.length; i++) {
+        if (array[i]['age'] > age) {
             age = array[i]['age'];
             oldAge = array[i];
         }
@@ -47,11 +47,11 @@ function highestAge(array){
 console.log(people[0]['age']);
 console.log(highestAge(people));
 
-function highestAge2(array){
+function highestAge2(array) {
     let age = 0;
     let oldAge = [];
     for (const person of people) {
-        if(person['age'] > age){
+        if (person['age'] > age) {
             age = person['age'];
             oldAge = person;
         }
@@ -62,14 +62,14 @@ function highestAge2(array){
 console.log(highestAge2(people));
 
 const people2 = [
-    {name: 'igor', age: 34},
-    {name: 'isabele', age: 30},
-    {name: 'Tainá', age: 40},
-    {name: 'jhones', age: 37}
+    { name: 'igor', age: 34 },
+    { name: 'isabele', age: 30 },
+    { name: 'Tainá', age: 40 },
+    { name: 'jhones', age: 37 }
 ];
 
-function highestAge3(arr){
-    arr.sort((a, b) =>  b.age - a.age)
+function highestAge3(arr) {
+    arr.sort((a, b) => b.age - a.age)
     return arr[0];
 };
 
@@ -101,7 +101,36 @@ console.log(new_array_of_numbers);
 
 // 4. Array Sorting: Write a function that sorts an array of objects based on a specific property (e.g., 'price') in ascending order.
 
+const arrayOfObjects = [
+    {
+        brand: 'Apple',
+        product: 'iPhone',
+        price: 100
+    },
+    {
+        brand: 'Samsung',
+        product: 'Galaxy',
+        price: 110
+    },
+    {
+        brand: 'Xiaomi',
+        product: 'MiPro',
+        price: 98
+    },
+    {
+        brand: 'Nokia',
+        product: 'C60',
+        price: 200
+    }
+];
 
+console.log('_________________________________________________ ');
+
+function arraySorting(arr){
+    return arr.sort((a, b) => a.price - b.price);
+};
+
+console.log(arraySorting(arrayOfObjects));
 
 // 5. Array Manipulation: Write a function that removes the first and last elements from an array and returns the modified array.
 
