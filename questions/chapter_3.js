@@ -132,6 +132,23 @@ function arraySorting(arr){
 
 console.log(arraySorting(arrayOfObjects));
 
+console.log('_________________________________________________ ');
+console.log('_________________________________________________ ');
+
+let array_of_objects = [
+    { price: 4.2 },
+    { price: 8.3 },
+    { price: 2.2 }
+
+]
+
+array_of_objects.sort(function (a, b) {
+    return b.price - a.price
+})
+
+console.log(array_of_objects)
+
+
 // 5. Array Manipulation: Write a function that removes the first and last elements from an array and returns the modified array.
 
 
