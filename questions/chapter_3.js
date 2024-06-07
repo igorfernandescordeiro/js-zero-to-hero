@@ -151,6 +151,10 @@ console.log(array_of_objects)
 
 // 5. Array Manipulation: Write a function that removes the first and last elements from an array and returns the modified array.
 
+const arrayToRemove = ['1', '2', '3', '4', '5', '6', '7'];
+arrayToRemove.pop();
+arrayToRemove.shift();
+console.log(arrayToRemove);
 
 
 // 6. Object Iteration: Given an object representing a shopping cart with items and their quantities, write a function that calculates the total cost of the items.
