@@ -126,7 +126,7 @@ const arrayOfObjects = [
 
 console.log('_________________________________________________ ');
 
-function arraySorting(arr){
+function arraySorting(arr) {
     return arr.sort((a, b) => a.price - b.price);
 };
 
@@ -158,8 +158,8 @@ console.log(arrayToRemove);
 // professor's way
 const arrayToRemove2 = ['1', '2', '3', '4', '5', '6', '7', '8'];
 
-function trimArray (arr) {
-    const trimmed_array = arr.slice(1, arr.length-1);
+function trimArray(arr) {
+    const trimmed_array = arr.slice(1, arr.length - 1);
     return trimmed_array;
 }
 
@@ -168,7 +168,41 @@ console.log(trimArray(arrayToRemove2));
 
 
 // 6. Object Iteration: Given an object representing a shopping cart with items and their quantities, write a function that calculates the total cost of the items.
+const shoppingCar = [
+    {
+        item: 'Mouse',
+        quantity: 2,
+        value: 10
+    },
+    {
+        item: 'Keyboard',
+        quantity: 3,
+        value: 15.5
+    },
+    {
+        item: 'Monitor',
+        quantity: 1,
+        value: 100
+    }
+];
 
+function totalCost(obj){
+    let total = 0;
+    for (const item of obj) {
+        total += item.quantity * item.value
+    }
+    return total;
+};
+
+console.log(totalCost(shoppingCar));
+
+
+function totalCost2(obj){
+    return obj.reduce((accumulate, currentValue)=> {
+        return accumulate + (currentValue.quantity * currentValue.value)
+    }, 0);
+};
+console.log(totalCost2(shoppingCar));
 
 
 // 7. Object Manipulation: Write a function that deep clones an object (i.e., copies all nested objects and arrays) to prevent unintended mutations.
