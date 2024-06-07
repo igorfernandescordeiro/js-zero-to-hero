@@ -204,6 +204,35 @@ function totalCost2(obj){
 };
 console.log(totalCost2(shoppingCar));
 
+// professors way
+
+
+let shopping_cart = {
+    'cheese': {
+        quantity: 4,
+        price: 8
+    },
+    milk: {
+        quantity: 10,
+        price: 4
+    }
+}
+
+function sumProducts(obj) {
+    let object_keys = Object.keys(obj)
+    let product_total = 0
+
+    for (let i = 0; i < object_keys.length; i++) {
+        let current_key = object_keys[i]
+        const key_data = shopping_cart[current_key]
+        product_total = product_total + key_data.price * key_data.quantity
+    }
+
+    return product_total
+}
+
+console.log(sumProducts(shopping_cart))
+
 
 // 7. Object Manipulation: Write a function that deep clones an object (i.e., copies all nested objects and arrays) to prevent unintended mutations.
 
