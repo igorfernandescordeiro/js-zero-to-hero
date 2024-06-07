@@ -155,6 +155,16 @@ const arrayToRemove = ['1', '2', '3', '4', '5', '6', '7'];
 arrayToRemove.pop();
 arrayToRemove.shift();
 console.log(arrayToRemove);
+// professor's way
+const arrayToRemove2 = ['1', '2', '3', '4', '5', '6', '7', '8'];
+
+function trimArray (arr) {
+    const trimmed_array = arr.slice(1, arr.length-1);
+    return trimmed_array;
+}
+
+console.log(trimArray(arrayToRemove2));
+
 
 
 // 6. Object Iteration: Given an object representing a shopping cart with items and their quantities, write a function that calculates the total cost of the items.
