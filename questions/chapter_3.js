@@ -238,15 +238,25 @@ console.log(sumProducts(shopping_cart))
 
 const objectToBeCloned = {
     'car': {
-        color: 'black',
+        color: ['black', 'blue'],
         year: 2020,
-        value: 15.500
+        price: 15.500
     }
 };
 
-function clonesAnOjbect(obj) {
-
+function cloneAnObject(obj) {
+    return {...obj};
 };
+
+let clonedObj = cloneAnObject(objectToBeCloned);
+
+objectToBeCloned.motocycle = {
+    color: 'red',
+    year: 2022,
+    price: 3000
+}
+console.log(objectToBeCloned);
+console.log(clonedObj);
 
 
 // 8. Object Iteration: Given an object representing a student's grades in various subjects, calculate their average grade.
