@@ -259,6 +259,36 @@ console.log(objectToBeCloned);
 console.log(clonedObj);
 
 
+// professor's way
+console.log('\n\nPROFESSOR´s way\n\n')
+
+let friend = {
+    'rupert': {
+        hobbies: ['gym', 'reading', 'mathematics']
+    }
+}
+
+function deepClone(obj) {
+    let new_object = {}
+
+    let object_keys = Object.keys(obj)
+
+    for (let i = 0; i < object_keys.length; i++) {
+        let current_key = object_keys[i]
+        new_object[current_key] = obj[current_key]
+    }
+
+    return new_object
+}
+
+let new_friends = deepClone(friend)
+
+friend.james = {
+    hobbies: ['sleep']
+}
+console.log(new_friends)
+
+
 // 8. Object Iteration: Given an object representing a student's grades in various subjects, calculate their average grade.
 
 
