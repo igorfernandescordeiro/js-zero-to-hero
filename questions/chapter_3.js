@@ -236,6 +236,17 @@ console.log(sumProducts(shopping_cart))
 
 // 7. Object Manipulation: Write a function that deep clones an object (i.e., copies all nested objects and arrays) to prevent unintended mutations.
 
+const objectToBeCloned = {
+    'car': {
+        color: 'black',
+        year: 2020,
+        value: 15.500
+    }
+};
+
+function clonesAnOjbect(obj) {
+
+};
 
 
 // 8. Object Iteration: Given an object representing a student's grades in various subjects, calculate their average grade.
