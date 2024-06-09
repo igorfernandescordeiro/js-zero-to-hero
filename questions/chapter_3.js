@@ -334,7 +334,40 @@ function calculateAverage(obj) {
 console.log(calculateAverage(grades))
 
 
+console.log('\n\nPROFESSOR´s way\n\n')
 
+let student = {
+    chemistry: {
+        grade: 9
+    },
+    physics: {
+        grade: 7
+    },
+    maths: {
+        grade: 1
+    }
+}
+
+function findAverageGrade(obj) {
+    let sum = 0
+    let number_of_subjects = 0
+
+    let list_of_subjects = Object.keys(obj)
+
+    for (let i = 0; i < list_of_subjects.length; i++) {
+        let current_key = list_of_subjects[i]
+        let subject_grade = student[current_key].grade // he is using stundent here instead of obj.
+
+        sum = sum + subject_grade
+        number_of_subjects++
+    }
+
+    let average_grade = sum / number_of_subjects
+    return average_grade
+}
+
+
+console.log(findAverageGrade(student))
 
 // 9. Scope and Closure: Create a function that returns a new function. The returned function should remember and log the number of times it's been called.
 
