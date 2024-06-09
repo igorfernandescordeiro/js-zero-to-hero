@@ -300,8 +300,11 @@ const grades = {
     grammar: {
         note: 8
     },
-    phisics: {
+    physics: {
         note: 9
+    },
+    chemistry: {
+        note: 5
     }
 };
 
@@ -316,7 +319,19 @@ const sumOfNotes = notes.reduce((accumulate, currentValue) => {
 
 const average = sumOfNotes / quantityOfSubjects;
 
-console.log('Average grade: ', average)
+console.log('Average grade: ', average);
+
+// the same solution but creation a fucntion
+
+function calculateAverage(obj) {
+    const quantitySub = Object.keys(obj).length;
+    const subjectsNotes = Object.values(obj);
+    const sumOfNotes = subjectsNotes.reduce((a, cv) => {
+        return a + cv.note;
+    }, 0)
+    return sumOfNotes / quantitySub;
+};
+console.log(calculateAverage(grades))
 
 
 
