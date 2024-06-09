@@ -186,7 +186,7 @@ const shoppingCar = [
     }
 ];
 
-function totalCost(obj){
+function totalCost(obj) {
     let total = 0;
     for (const item of obj) {
         total += item.quantity * item.value
@@ -197,8 +197,8 @@ function totalCost(obj){
 console.log(totalCost(shoppingCar));
 
 
-function totalCost2(obj){
-    return obj.reduce((accumulate, currentValue)=> {
+function totalCost2(obj) {
+    return obj.reduce((accumulate, currentValue) => {
         return accumulate + (currentValue.quantity * currentValue.value)
     }, 0);
 };
@@ -245,7 +245,7 @@ const objectToBeCloned = {
 };
 
 function cloneAnObject(obj) {
-    return {...obj};
+    return { ...obj };
 };
 
 let clonedObj = cloneAnObject(objectToBeCloned);
@@ -290,6 +290,34 @@ console.log(new_friends)
 
 
 // 8. Object Iteration: Given an object representing a student's grades in various subjects, calculate their average grade.
+
+console.log('\n\n ------------------- \n\n')
+
+const grades = {
+    math: {
+        note: 10
+    },
+    grammar: {
+        note: 8
+    },
+    phisics: {
+        note: 9
+    }
+};
+
+
+// all notes divided per quantity of subjects
+const notes = Object.values(grades).map(subject => subject.note);
+const quantityOfSubjects = notes.length;
+
+const sumOfNotes = notes.reduce((accumulate, currentValue) => {
+    return accumulate + currentValue
+})
+
+const average = sumOfNotes / quantityOfSubjects;
+
+console.log('Average grade: ', average)
+
 
 
 
