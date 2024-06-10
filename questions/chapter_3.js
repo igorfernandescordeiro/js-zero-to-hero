@@ -382,7 +382,21 @@ console.log(findAverageGrade(student))
     count();
     count();
     count();
+    console.log('\n\nPROFESSOR´s way\n\n')
 
+    function inception() {
+        let number_of_invocations = 0
+    
+        return function () {
+            number_of_invocations++
+            console.log(number_of_invocations)
+        }
+    }
+    
+    const incrementer = inception()
+    
+    incrementer()
+    incrementer()
 
 
 
