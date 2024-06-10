@@ -370,6 +370,19 @@ function findAverageGrade(obj) {
 console.log(findAverageGrade(student))
 
 // 9. Scope and Closure: Create a function that returns a new function. The returned function should remember and log the number of times it's been called.
+    function counter(){
+        let count = 0;
+        return function(){
+            count++;
+            console.log('This function was called: '+ count + ' times');
+        }
+    };
+
+    const count = counter();
+    count();
+    count();
+    count();
+
 
 
 
