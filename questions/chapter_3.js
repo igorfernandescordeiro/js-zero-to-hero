@@ -401,7 +401,24 @@ console.log(findAverageGrade(student))
 
 
 // 10. Array Sorting: Write a function that sorts an array of objects based on a specific property (e.g., 'date') in descending order.
+    const family = {
+        igor: {
+            lastname: 'Cordeiro',
+            date: '14/05/1990'
+        },
+        tais: {
+            lastname: 'Cordeiro',
+            date: '20/08/1988'
+        },
+        taina: {
+            lastname: 'Cordeiro',
+            date: '23/09/1983'
+        }
+    };
 
+    function sortArray(){
+        // I think I should use the sort() method
+    };
 
 
 
