@@ -404,22 +404,25 @@ console.log(findAverageGrade(student))
     const family = {
         igor: {
             lastname: 'Cordeiro',
-            date: '14/05/1990'
+            date: '1990'
         },
         tais: {
             lastname: 'Cordeiro',
-            date: '20/08/1988'
+            date: '1988'
         },
         taina: {
             lastname: 'Cordeiro',
-            date: '23/09/1983'
+            date: '1983'
         }
     };
 
-    function sortArray(){
-        // I think I should use the sort() method
+    function sortArray(arr){
+        const newArray = Object.entries(arr);
+        const sortedArray = newArray.sort((a, b) => a[1].date - b[1].date);
+        const sortedArrayObject = Object.fromEntries(sortedArray);
+         return sortedArrayObject;
     };
-
+console.log(sortArray(family));
 
 
 // 11. Array Methods: Given an array of strings, filter out all the strings with a length less than 5 characters.
