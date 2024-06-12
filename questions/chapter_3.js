@@ -445,12 +445,29 @@ console.log(sortByGrade(grades_array))
 
 // 11. Array Methods: Given an array of strings, filter out all the strings with a length less than 5 characters.
 
-const arrayOfNames = ['igor', 'tais', 'taina'];
+const arrayOfNames = ['igor', 'tais', 'taina fernandes'];
 
-const newArrayOfNames = arrayOfNames.filter(name => name.length < 5);
+const newArrayOfNames = arrayOfNames.filter(name => name.length > 5);
 console.log(newArrayOfNames);
 
+console.log('\n\nPROFESSOR´s way\n\n')
 
+let array_of_short_strings = ['hello', 'world', 'my', 'name', 'juan lopez', 'long word']
+
+function filterShortStrings(arr) {
+    let new_array_of_long_strings = []
+
+    for (let i = 0; i < arr.length; i++) {
+        let current_string = arr[i]
+        if (current_string.length > 5) {
+            new_array_of_long_strings.push(current_string)
+        }
+    }
+
+    return new_array_of_long_strings
+}
+
+console.log(filterShortStrings(array_of_short_strings))
 
 
 
