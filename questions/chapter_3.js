@@ -424,8 +424,34 @@ console.log(findAverageGrade(student))
     };
 console.log(sortArray(family));
 
+console.log('\n\nPROFESSOR´s way\n\n')
+
+let grades_array = [
+    { subject: 'maths', grade: 10 },
+    { subject: 'spanish', grade: 2 },
+    { subject: 'literature', grade: 6 }
+]
+
+function sortByGrade(arr) {
+    let sorted_array = grades_array.sort(function (a, b) {
+        return b.grade - a.grade
+    })
+
+    return sorted_array
+}
+
+console.log(sortByGrade(grades_array))
+
 
 // 11. Array Methods: Given an array of strings, filter out all the strings with a length less than 5 characters.
+
+const arrayOfNames = ['igor', 'tais', 'taina'];
+
+const newArrayOfNames = arrayOfNames.filter(name => name.length < 5);
+console.log(newArrayOfNames);
+
+
+
 
 
 
