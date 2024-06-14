@@ -474,3 +474,23 @@ console.log(filterShortStrings(array_of_short_strings))
 
 // 13. Object Iteration: Write a function that counts the number of occurrences of each word in a given string and stores the results in an object.
 
+
+const longString = 'this is a string that contain a text that should contain some words that repeat I do not know if the words are going to repeat itself because I am just writing';
+
+function countWord(string) {
+    const wordCounts = {};
+
+    const words = string.split(' ');
+
+    for (const word of words) {
+
+        if(wordCounts[word]){
+            wordCounts[word]++;
+        } else {
+            wordCounts[word] = 1;
+        }
+    };
+    return wordCounts;
+}
+console.log(countWord(longString));
+
