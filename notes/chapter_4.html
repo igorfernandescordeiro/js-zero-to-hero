@@ -5,6 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>DOM Manipulation Practice</title>
+    <script src="chapter_2.js" defer></script>
 
 </head>
 
@@ -46,7 +47,11 @@
         let contentArea = document.getElementById('content-area');
 
         contentArea.innerHTML = '<h1> HELOO </h1>';
-        let newHTML = document.querySelector('#content-area h1').style.background = 'green'
+        let newHTML = document.querySelector('#content-area h1');
+        newHTML.style.background = 'green';
+        newHTML.style.color = 'red';
+
+
 
         function handleOpenModal() {
             console.log('button is working');
