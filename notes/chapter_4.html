@@ -12,7 +12,7 @@
 
     <h1 id="main-title">DOM Manipulation</h1>
 
-    <form id="form-example">
+    <form id="form-example" onsubmit="return handleSubmitForm(event)">
         <label for="name">Name:</label>
         <input type="text" id="name" name="name"><br><br>
         <label for="age">Age:</label>
@@ -39,17 +39,34 @@
         let modalCloseBtn = document.getElementById('close-modal-btn');
         let modal = document.getElementById('modal');
         let xBtn = document.querySelector('.close');
+        let textArea = document.getElementById('text-area');
+        let inputName = document.getElementById('name');
+        let inputAge = document.getElementById('age');
+
+        let contentArea = document.getElementById('content-area');
+
+        contentArea.innerHTML = '<h1> HELOO </h1>';
+        let newHTML = document.querySelector('#content-area h1').style.background = 'green'
 
         function handleOpenModal() {
             console.log('button is working');
             modal.style.display = 'flex';
             modal.style.color = 'green';
+            console.log(textArea.value);
+            textArea.value = 'HELOO'
         };
 
         function handleCloseModal() {
             modal.style.display = 'none';
             modal.style.color = 'green';
         };
+
+        function handleSubmitForm(event){
+            event.preventDefault();
+            console.log('name: ', inputName.value);
+            console.log('age: ', inputAge.value);
+            
+        }
 
         modalOpenBtn.addEventListener('click', handleOpenModal);
         modalCloseBtn.addEventListener('click', handleCloseModal);
