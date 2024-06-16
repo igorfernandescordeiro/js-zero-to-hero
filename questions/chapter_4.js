@@ -10,6 +10,17 @@ buttonToBeClicked.addEventListener('click', () => {
     alert('Button Clicked!');
 });
 
+// PROFESSOR'S WAY \/
+
+let submitBtn = document.querySelector('input[type="submit"]');
+
+function alertFunction() {
+    alert('Button Clicked!!!')
+}
+
+submitBtn.addEventListener('click', alertFunction)
+
+
 
 // 3. Dynamic Styling: How can you change the background color of a <div> with the class highlight to yellow when a user hovers over it using JavaScript?
 
