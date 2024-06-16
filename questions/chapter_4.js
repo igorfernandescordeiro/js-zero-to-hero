@@ -1,9 +1,14 @@
 // 1. Basic DOM Manipulation: How do you select an element with the ID main-title and change its text content to "Welcome to the DOM World"?
 
-
+let elementToChange = document.getElementById('main-title');
+elementToChange.innerText = 'Welcome to the DOM World';
 
 // 2. Event Handling: Write the JavaScript code to listen for a click event on a button with the ID submit-btn and alert "Button Clicked!".
 
+let buttonToBeClicked = document.querySelector('input[type="submit"]');
+buttonToBeClicked.addEventListener('click', () => {
+    alert('Button Clicked!');
+});
 
 
 // 3. Dynamic Styling: How can you change the background color of a <div> with the class highlight to yellow when a user hovers over it using JavaScript?
