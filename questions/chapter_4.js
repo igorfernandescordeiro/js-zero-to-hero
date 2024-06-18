@@ -38,6 +38,17 @@ divModal.addEventListener('mouseout', turnOffYellow);
 
 // 4. Element Creation and Insertion: Describe how to create a new <li> element, set its text content to "New Item", and append it to an existing <ul> with the ID list-container.
 
+// let divTwo = document.getElementById('content-area2');
+// divTwo.innerHTML = '<li>New Item</li>' WRONG!!!
+
+let ulContainer = document.getElementById('list-container');
+
+let newItem = document.createElement('li');
+
+newItem.innerText = 'New Item';
+
+ulContainer.appendChild(newItem);
+
 
 
 // 5. Form Handling: Write a script to prevent the default submission of a form with the ID form-example and instead console log the value of a text input field within the form when the submit button is clicked.
