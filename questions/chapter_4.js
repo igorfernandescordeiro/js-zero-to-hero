@@ -23,7 +23,17 @@ submitBtn.addEventListener('click', alertFunction)
 
 
 // 3. Dynamic Styling: How can you change the background color of a <div> with the class highlight to yellow when a user hovers over it using JavaScript?
+let divModal = document.getElementById('content-area');
 
+function highlightYellow(){
+    divModal.style.background = 'yellow';
+};
+function turnOffYellow(){
+    divModal.style.background = 'none';
+}
+
+divModal.addEventListener('mouseover', highlightYellow);
+divModal.addEventListener('mouseout', turnOffYellow);
 
 
 // 4. Element Creation and Insertion: Describe how to create a new <li> element, set its text content to "New Item", and append it to an existing <ul> with the ID list-container.
