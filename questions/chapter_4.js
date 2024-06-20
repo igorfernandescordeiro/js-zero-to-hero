@@ -93,6 +93,8 @@ paragraphElement.innerText = new Date();
 
 // 9. Event Listener Removal: How do you remove an event listener from an element, and why might you need to do this?
 
+document.getElementById('any-id-that-I-want-target').removeEventListener('click', myFunction);
+
 
 
 // 10. Manipulating Attributes and Properties: Write JavaScript code to change the src attribute of an <img> element and explain the difference between attributes and properties in the context of DOM elements.
