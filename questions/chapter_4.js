@@ -85,6 +85,10 @@ toggleElement.addEventListener('click', toggleStyle);
 
 // 8. Advanced Event Handling: Write JavaScript code to change the text content of a paragraph element to display the current time when a button is clicked.
 
+let paragraphElement = document.querySelector('p');
+
+paragraphElement.innerText = new Date();
+
 
 
 // 9. Event Listener Removal: How do you remove an event listener from an element, and why might you need to do this?
