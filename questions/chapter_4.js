@@ -75,7 +75,13 @@ proBtn.addEventListener('click', stopBtnPropagation);
 
 // 7. Dynamic Page Styling: How can you toggle a class active on an element when it is clicked, ensuring that if the class is present it gets removed, and if it's not, it gets added?
 
+let toggleElement = document.getElementById('toggle-element');
 
+function toggleStyle() {
+    toggleElement.classList.toggle('active');
+};
+
+toggleElement.addEventListener('click', toggleStyle);
 
 // 8. Advanced Event Handling: Write JavaScript code to change the text content of a paragraph element to display the current time when a button is clicked.
 
