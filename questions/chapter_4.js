@@ -53,6 +53,13 @@ ulContainer.appendChild(newItem);
 
 // 5. Form Handling: Write a script to prevent the default submission of a form with the ID form-example and instead console log the value of a text input field within the form when the submit button is clicked.
 
+let form = document.getElementById('form-example');
+
+function handleSubmit(event){
+    event.preventDefault();
+};
+form.addEventListener('submit', handleSubmit);
+
 
 
 
