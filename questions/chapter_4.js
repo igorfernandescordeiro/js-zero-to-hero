@@ -65,6 +65,12 @@ form.addEventListener('submit', handleSubmit);
 
 // 6. Understanding Event Bubbling: Provide an example of stopping event bubbling when clicking on a <button> contained within a <div> that both have click event listeners attached.
 
+let proBtn = document.querySelector('button');
+function stopBtnPropagation(e) {
+    e.stopPropagation();
+};
+proBtn.addEventListener('click', stopBtnPropagation);
+
 
 
 // 7. Dynamic Page Styling: How can you toggle a class active on an element when it is clicked, ensuring that if the class is present it gets removed, and if it's not, it gets added?
