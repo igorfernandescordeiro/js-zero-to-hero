@@ -99,6 +99,8 @@ document.getElementById('any-id-that-I-want-target').removeEventListener('click'
 
 // 10. Manipulating Attributes and Properties: Write JavaScript code to change the src attribute of an <img> element and explain the difference between attributes and properties in the context of DOM elements.
 
+document.querySelector('img').setAttribute('src', 'new-img.png');
+
 
 
 // 11. Utilizing Dataset Attributes: Explain how to use data-* attributes within an HTML element to store extra information and how to access this information using JavaScript.
