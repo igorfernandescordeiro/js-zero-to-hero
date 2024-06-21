@@ -105,4 +105,11 @@ document.querySelector('img').setAttribute('src', 'new-img.png');
 
 // 11. Utilizing Dataset Attributes: Explain how to use data-* attributes within an HTML element to store extra information and how to access this information using JavaScript.
 
+let informationDiv = document.getElementById('info');
+
+console.log(informationDiv.dataset.userId)
+
+
+
+
 //<div id="info" data-user-id="12345" data-user-role="admin"></div>
