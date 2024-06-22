@@ -23,3 +23,16 @@ const them = new Person('jhones', 37);
 
 console.log(you);
 console.log(them.greet());
+
+
+class Gamer extends Person {
+    constructor(name, age, videogame){
+        super(name, age);
+        this.videogame = videogame;
+    };
+};
+
+const nerdyGuy = new Gamer('arlan', 32, 'hellblade');
+
+
+console.log(nerdyGuy);
