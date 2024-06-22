@@ -34,5 +34,30 @@ class Gamer extends Person {
 
 const nerdyGuy = new Gamer('arlan', 32, 'hellblade');
 
-
+nerdyGuy.videogame = 'valorant';
 console.log(nerdyGuy);
+
+// getters and setters
+class MyClass {
+    constructor(name) {
+        this._name = name;
+    };
+
+    get name() {
+        console.log('Name Checked');
+        return this._name;
+    };
+
+    set name(value) {
+        console.log('Name Changed');
+        this._name = value;
+    };
+};
+
+
+const obj = new MyClass('lucy');
+
+console.log(obj.name);
+
+obj.name = 'New name';
+console.log(obj);
