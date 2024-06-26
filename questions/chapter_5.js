@@ -28,6 +28,20 @@ console.log(circle);
 
 // 3. Explain how you would add a method named calculateArea to the Rectangle class that calculates the area of the rectangle. How does this method get added to the prototype of the class, and how can all instances of Rectangle access it?
 
+class Rectangle1 {
+    constructor(width, height) {
+        this.width = width;
+        this.height = height;
+    };
+
+    calculateArea() {
+        return this.width * this.height;
+    }
+};
+let a = new Rectangle1(10, 10);
+console.log(a.calculateArea());
+
+
 
 
 // 4. In the context of a class method in JavaScript, what does the this keyword refer to, and how would you use it inside a method named describe in a class Person to access the instance's properties named name and age?
