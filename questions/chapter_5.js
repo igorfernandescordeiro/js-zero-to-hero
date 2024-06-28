@@ -46,6 +46,21 @@ console.log(a.calculateArea());
 
 // 4. In the context of a class method in JavaScript, what does the this keyword refer to, and how would you use it inside a method named describe in a class Person to access the instance's properties named name and age?
 
+class Person {
+    constructor(name, age) {
+        this.name = name;
+        this.age = age;
+    };
+
+    describe(){
+        console.log(this.name, this.age);
+    };
+};
+
+let person = new Person('igor', 34);
+
+person.describe();
+
 
 
 // 5. Create a class named Animal with a constructor that initializes a property species. Then, define a subclass named Dog that inherits from Animal and adds an additional property name in its constructor. How do instances of Dog access methods defined on Animal's prototype?
