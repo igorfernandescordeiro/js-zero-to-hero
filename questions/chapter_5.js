@@ -65,3 +65,19 @@ person.describe();
 
 // 5. Create a class named Animal with a constructor that initializes a property species. Then, define a subclass named Dog that inherits from Animal and adds an additional property name in its constructor. How do instances of Dog access methods defined on Animal's prototype?
 
+class Animal {
+    constructor(species) {
+        this.species = species;
+    };
+};
+
+class Dog extends Animal {
+    constructor(species, name) {
+        super(species);
+        this.name = name;
+    };
+};
+
+let turnCan = new Dog('street dog', 'carlos');
+
+console.log(turnCan);
