@@ -1,6 +1,17 @@
 
 // 1. Create a function that uses the following asynchronous sleep call to print the message 'hello world' after 2 seconds
 
+function sleep(ms) {
+    return new Promise(resolve => setTimeout(resolve, ms));
+  };
+
+async function waitForHelloWorld(){
+    await sleep(2000);
+    console.log('Hello World');
+};
+
+waitForHelloWorld();
+
 
 
 // 2. Write an async function that attempts to fetch data from 'https://api.example.com/nonexistent', which will likely lead to a 404 error. Use try/catch to handle the error and log "Error fetching data" if the request fails.
