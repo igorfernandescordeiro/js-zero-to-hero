@@ -25,7 +25,7 @@ async function attemptsFetch(){
     // console.log(data);
   }
     catch(error) {
-      console.log(error.message + ' aaaa');
+      console.log("Error fetching data");
     }
 };
 attemptsFetch();
