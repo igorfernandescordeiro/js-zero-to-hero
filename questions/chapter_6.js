@@ -33,6 +33,9 @@ attemptsFetch();
 
 
 // 3. Write an async function named fetchUserData that makes a GET request to 'https://the-one-api.dev/v2/' using async/await. Log the response to the console, handling any errors that might occur.
+async function fetchUserData {
+  const response = 
+}
 
 
 
