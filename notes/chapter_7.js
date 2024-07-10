@@ -75,3 +75,12 @@ console.log(name, age);
 console.log(person2_name, person2_age);
 
 // array destructuring
+
+let oldArray = [4, 5];
+
+// the index of the positions have to match the index of the array values 
+const [value1, value2] = oldArray;
+
+
+
+console.log(value2, value1);
