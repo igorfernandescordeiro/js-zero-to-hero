@@ -19,3 +19,22 @@ const myFunction2 = (input) => {
 
 
 // Ternary operator ? 
+
+let friends = ['igor', 'jhones', 'arlan'];
+
+let isIgorFriend;
+let isIgorFriend2;
+
+if(friends.includes('igor')){
+    isIgorFriend = true;
+} else {
+    isIgorFriend = false;
+};
+
+console.log(isIgorFriend);
+
+friends.includes('igor') ? isIgorFriend2 = true : isIgorFriend2 = false;
+
+console.log(isIgorFriend2);
+
+// optional chaining
