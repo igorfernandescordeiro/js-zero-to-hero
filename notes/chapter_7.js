@@ -51,3 +51,27 @@ const igor = {
 console.log(igor?.hobbies?.skiing?.pairs_of_boots);
 
 
+// object destructuring
+
+let person = {
+    name: 'igor',
+    age: 34
+};
+
+let person2 = {
+    name: 'jhones',
+    age: 37
+};
+//  to the destructuring works the name of the variables should be the same of the variables of the object.
+const {name, age} = person;
+
+// it is possible to rename the variable this way:
+
+const {name: person2_name, age: person2_age} = person2;
+
+
+console.log(name, age);
+
+console.log(person2_name, person2_age);
+
+// array destructuring
