@@ -84,3 +84,14 @@ const [value1, value2] = oldArray;
 
 
 console.log(value2, value1);
+
+
+
+// template literal string
+
+let my_name = 'Igor';
+
+
+console.log(`My name is ${my_name}`);
+
+// short circuits
