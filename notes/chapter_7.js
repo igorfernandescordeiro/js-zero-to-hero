@@ -94,4 +94,28 @@ let my_name = 'Igor';
 
 console.log(`My name is ${my_name}`);
 
-// short circuits
+// short circuits && ||
+
+// AND && 
+
+let person_dictionary = {name: 'igor'};
+console.log(person_dictionary);
+
+// this is a short circuits
+// if this is true (person_dictionary.name) the value 'IGOR' will be assign to the person_name_2
+let person_name_2 = person_dictionary.name && 'IGOR';
+console.log(person_name_2);
+
+// this below is the same as above
+
+if (person_dictionary.name) {
+    person_name_2 = 'IGOR'
+}
+
+// in this case, if the person_dictionary.name is true nothing happens but if it is false the value will be assigned as 'default name' 
+let person_name_3 = person_dictionary.name || 'default name';
+
+console.log(person_name_3);
+
+
+// enhanced object literals
