@@ -1,0 +1,16 @@
+{
+  "name": "js-zero-to-hero",
+  "version": "1.0.0",
+  "description": "https://www.udemy.com/course/the-complete-javascript-course-zero-to-hero/",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "console": "node notes/chapter_7.js"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.19.2"
+  }
+}
