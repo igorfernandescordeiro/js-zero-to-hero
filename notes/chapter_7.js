@@ -119,3 +119,15 @@ console.log(person_name_3);
 
 
 // enhanced object literals
+
+let breed = 'corgi';
+let animal = 'dog';
+
+const animal_info = {
+    breed,
+    animal
+};
+
+
+// spread operator
+
