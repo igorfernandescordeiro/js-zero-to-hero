@@ -167,3 +167,20 @@ let my_cool_array = [1, 2, 3, 212, 2316, 64, 78, 2, 8, 876, 456, 2, 0];
         });
 
         console.log(my_new_array);
+
+        //filter
+        let filtered_array = my_cool_array.filter((current_value, current_index) => {
+            let is_even =  current_value % 2 === 0;
+            return !is_even;
+        }) 
+
+        console.log(filtered_array);
+
+        //reduce
+        let reduce_array = my_cool_array.reduce((accumulator, current_value, current_index) => {
+            console.log(`ACCUMULATOR: ${accumulator}\nCURRENT_VALUE: ${current_value}\nCURRENT_INDEX: ${current_index}`);
+            return accumulator + `, ${current_value}:${current_index}`;
+
+        }, '');
+
+        console.log(reduce_array);
