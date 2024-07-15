@@ -132,7 +132,7 @@ const animal_info = {
 // spread operator
 
 let demo_array = [1, 2, 3, 4, 5];
-let demo_array_2 = [...demo_array, 6 ,7];
+let demo_array_2 = [...demo_array, 6, 7];
 
 console.log(demo_array);
 console.log(demo_array_2);
@@ -148,3 +148,22 @@ let demo_obj2 = {
 
 console.log(demo_obj);
 console.log(demo_obj2);
+
+
+
+// array methods
+
+let my_cool_array = [1, 2, 3, 212, 2316, 64, 78, 2, 8, 876, 456, 2, 0];
+
+        //for each
+
+        my_cool_array.forEach((current_value, current_index) => {
+            console.log(`The current value is: ${current_value} and the current index is: ${current_index}`);
+        });
+
+        //map
+        let my_new_array = my_cool_array.map((current_value, current_index) => {
+            return ` the value is: ${current_value * 2}`;
+        });
+
+        console.log(my_new_array);
