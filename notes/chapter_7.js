@@ -8,12 +8,12 @@ function myFunction(input) {
 };
 
 // arrow function
-(input) => { 
+(input) => {
     console.log('Executed function');
 };
 
 // naming an arrow function
-const myFunction2 = (input) => { 
+const myFunction2 = (input) => {
     console.log('Executed function');
 };
 
@@ -25,7 +25,7 @@ let friends = ['igor', 'jhones', 'arlan'];
 let isIgorFriend;
 let isIgorFriend2;
 
-if(friends.includes('igor')){
+if (friends.includes('igor')) {
     isIgorFriend = true;
 } else {
     isIgorFriend = false;
@@ -63,11 +63,11 @@ let person2 = {
     age: 37
 };
 //  to the destructuring works the name of the variables should be the same of the variables of the object.
-const {name, age} = person;
+const { name, age } = person;
 
 // it is possible to rename the variable this way:
 
-const {name: person2_name, age: person2_age} = person2;
+const { name: person2_name, age: person2_age } = person2;
 
 
 console.log(name, age);
@@ -98,7 +98,7 @@ console.log(`My name is ${my_name}`);
 
 // AND && 
 
-let person_dictionary = {name: 'igor'};
+let person_dictionary = { name: 'igor' };
 console.log(person_dictionary);
 
 // this is a short circuits
@@ -131,3 +131,20 @@ const animal_info = {
 
 // spread operator
 
+let demo_array = [1, 2, 3, 4, 5];
+let demo_array_2 = [...demo_array, 6 ,7];
+
+console.log(demo_array);
+console.log(demo_array_2);
+
+let demo_obj = {
+    favorite_color: 'blue'
+};
+
+let demo_obj2 = {
+    ...demo_obj,
+    favorite_food: 'smash burguer'
+};
+
+console.log(demo_obj);
+console.log(demo_obj2);
