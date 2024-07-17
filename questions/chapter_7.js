@@ -9,6 +9,12 @@ console.log(`My name is ${myName}`);
 
 // 2. Convert the following function into an arrow function syntax:
 
+function add(a,b) {
+  return a + b;
+};
+
+let add_with_arrow = (a,b) => { return a + b };
+
   
   // 3. Given an object person with properties name and age, use object destructuring to create two variables name and age, extracting the values from the object.
   
