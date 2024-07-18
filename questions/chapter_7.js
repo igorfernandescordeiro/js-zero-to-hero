@@ -15,8 +15,18 @@ function add(a,b) {
 
 let add_with_arrow = (a,b) => { return a + b };
 
+console.log(add_with_arrow(10,10));
+
   
   // 3. Given an object person with properties name and age, use object destructuring to create two variables name and age, extracting the values from the object.
+
+  const person = {
+    name: 'igor',
+    age: 34
+  };
+  const {name, age} = person;
+
+  console.log(name, age);
   
 
   // 4. Given an array colors with the values ['red', 'green', 'blue'], use array destructuring to create three variables named first, second, and third, assigning the first, second, and third elements of the array to them, respectively.
