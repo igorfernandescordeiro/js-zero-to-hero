@@ -30,6 +30,11 @@ console.log(add_with_arrow(10,10));
   
 
   // 4. Given an array colors with the values ['red', 'green', 'blue'], use array destructuring to create three variables named first, second, and third, assigning the first, second, and third elements of the array to them, respectively.
+
+  const colors = ['red', 'green', 'blue'];
+
+  const [first, second, third] = colors;
+  console.log(first, second, third);
   
 
   
