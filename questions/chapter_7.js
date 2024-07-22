@@ -39,6 +39,12 @@ console.log(add_with_arrow(10,10));
 
   
   // 5. How do you create a new array combined that contains all elements of arrays arr1 and arr2 using the spread operator?
+  const arr1 = [1,2,3,3,3,3];
+  const arr2 = [5,6,7,8,89,8,8];
+
+  const arr3 = [...arr1] + [...arr2];
+
+  console.log(arr3);
  
   
   // 6. How do you create a new object combinedObject that merges the properties of two objects obj1 and obj2, with properties from obj2 overwriting those in obj1 if they exist in both objects?
