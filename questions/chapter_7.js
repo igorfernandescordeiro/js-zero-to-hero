@@ -48,6 +48,18 @@ console.log(add_with_arrow(10,10));
  
   
   // 6. How do you create a new object combinedObject that merges the properties of two objects obj1 and obj2, with properties from obj2 overwriting those in obj1 if they exist in both objects?
+  const obj1 = {
+    name: 'igor',
+    age: 34,
+    gender: 'male'
+  };
+
+  const obj2 = {
+    name: 'jhones',
+    age: 37
+  };
+  const combinedObject = {...obj1, ...obj2};
+  console.log(combinedObject);
   
 
   
