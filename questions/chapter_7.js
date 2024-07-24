@@ -64,6 +64,12 @@ console.log(add_with_arrow(10,10));
 
   
   // 7. How do you safely access the street property of address inside an object user that may not exist, using optional chaining?
+  const user = {
+    address: {
+      houseColor: 'red'
+    }
+  }
+  console.log(user?.address?.street);
  
   
   // 8. Define a function greet(name, greeting = "Hello") that takes a name and an optional greeting. If the greeting is not provided, it should default to "Hello".
