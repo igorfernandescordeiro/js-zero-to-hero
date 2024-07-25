@@ -74,6 +74,18 @@ console.log(add_with_arrow(10,10));
   
   // 8. Define a function greet(name, greeting = "Hello") that takes a name and an optional greeting. If the greeting is not provided, it should default to "Hello".
 
+  function greet(name, greeting = "Hello"){
+
+    console.log(`${greeting}, ${name}`);
+
+  };
+
+  const greet1 = (name, greeting = "Hello") => {
+    console.log(`${greeting}, ${name}`);
+  };
+
+  greet('Igor');
+
   
   // 9. Explain the difference between let and const keywords, and give an example of when you would use each.
   
