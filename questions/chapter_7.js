@@ -97,7 +97,16 @@ console.log(add_with_arrow(10,10));
   
   // 10. Write a for...of loop that iterates over an array numbers and logs each number to the console.
   
+arr2.forEach(element => {
+  console.log('for each');
+  console.log(element);
+});
 
+for (const element of arr1) {
+  console.log('for of');
+  console.log(element);
+  
+}
   
   // 11. Given an array of numbers, use the map method to create a new array with each number squared.
  
