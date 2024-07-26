@@ -88,6 +88,10 @@ console.log(add_with_arrow(10,10));
 
   
   // 9. Explain the difference between let and const keywords, and give an example of when you would use each.
+// const can not be changed, but this can be modified its internal values, not the key... i dont know if that make sense
+  const array = [1,2,3,4];
+// let is a variable that can be changed
+  let names = 'igor';
   
  
   
