@@ -109,7 +109,14 @@ for (const element of arr1) {
 }
   
   // 11. Given an array of numbers, use the map method to create a new array with each number squared.
+
+const array_of_numbers = [1, 2, 31, 23, 2, 31, 5, 67, 3];
  
+const new_array_of_numbers = array_of_numbers.map((current_number) => {
+  return current_number * current_number;
+});
+
+console.log(`first array: ${array_of_numbers} \nSquared the same array: ${new_array_of_numbers}`);
   
   // 12. How would you use the ternary operator to assign "adult" to a variable ageStatus if age is 18 or over, and "minor" if under 18?
   
