@@ -119,11 +119,18 @@ const new_array_of_numbers = array_of_numbers.map((current_number) => {
 console.log(`first array: ${array_of_numbers} \nSquared the same array: ${new_array_of_numbers}`);
   
   // 12. How would you use the ternary operator to assign "adult" to a variable ageStatus if age is 18 or over, and "minor" if under 18?
-  
+  const age1 = 18;
+  let ageStatus = age1 < 18 ? 'minor' : 'adult';
 
+  console.log(ageStatus);
   
   // 13. How do you use the logical AND operator to execute a function logMessage() only if the variable isLoggedIn is true?
   
+  const logMessage = () => {console.log('logged in')};
+
+  let isLoggedIn = true;
+
+  isLoggedIn && logMessage();
 
   
   // 14. How can you use the logical OR operator to assign a default value of "guest" to a variable username if the current user.name is undefined or null?
