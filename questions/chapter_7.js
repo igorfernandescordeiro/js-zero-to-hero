@@ -134,4 +134,9 @@ console.log(`first array: ${array_of_numbers} \nSquared the same array: ${new_ar
 
   
   // 14. How can you use the logical OR operator to assign a default value of "guest" to a variable username if the current user.name is undefined or null?
+
+  const username = user.name || 'guest';
+
+  console.log(username);
+  console.log(user.name);
   
