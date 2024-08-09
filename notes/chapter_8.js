@@ -8,3 +8,9 @@
         // let
 
 // Have in mind that we always should have good names for variables and functions
+
+
+
+function loginUser() {
+    
+}
