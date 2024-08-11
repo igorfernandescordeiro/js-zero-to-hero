@@ -1,6 +1,29 @@
 // 1. Unique Characters in a String
 // Question: Write a function to determine if a string has all unique characters. Return true if all characters are unique, and false otherwise. Assume the string only contains lowercase letters.
 
+let string_1 = 'helloworldmynameisjamesandilikeicecream'
+let string_2 = 'thequickbrownfoxjumpsoverthelazydog'
+let string_3 = 'abcdefghijk'
+
+function isUnique(str) {
+    let count_dict = {}
+
+    for (let i = 0; i < str.length; i++) {
+        let current_char = str[i]
+        console.log(current_char, count_dict)
+        if (current_char in count_dict) {
+            return false
+        }
+        count_dict[current_char] = 1
+    }
+
+    return true
+}
+
+console.log(isUnique(string_3))
+
+
+
 
 
 // 2. Merge Sorted Arrays
