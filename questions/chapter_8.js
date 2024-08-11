@@ -29,6 +29,18 @@ console.log(isUnique(string_3))
 // 2. Merge Sorted Arrays
 // Question: Given two sorted arrays nums1 and nums2, write a function to merge them into a single, sorted array.
 
+const nums1 = [1,23,23,24,5,45,4]
+const nums2 = [6,78,9,45,4,8,0]
+
+function MergeAndSort(arr1, arr2) {
+    const mergedArray = [...arr1, ...arr2].sort();
+    // const sortedArray = mergedArray.sort((a,b) => a - b);
+
+    // return sortedArray;
+    return mergedArray;
+}
+
+console.log(MergeAndSort(nums1, nums2));
 
 
 
