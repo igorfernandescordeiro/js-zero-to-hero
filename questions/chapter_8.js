@@ -29,10 +29,10 @@ console.log(isUnique(string_3))
 // 2. Merge Sorted Arrays
 // Question: Given two sorted arrays nums1 and nums2, write a function to merge them into a single, sorted array.
 
-const nums1 = [1,23,23,24,5,45,4]
-const nums2 = [6,78,9,45,4,8,0]
+const nums1 = [1, 23, 23, 24, 5, 45, 4]
+const nums2 = [6, 78, 9, 45, 4, 8, 0]
 
-function MergeAndSort(arr1, arr2) {
+function mergeAndSort(arr1, arr2) {
     const mergedArray = [...arr1, ...arr2].sort();
     // const sortedArray = mergedArray.sort((a,b) => a - b);
 
@@ -40,17 +40,33 @@ function MergeAndSort(arr1, arr2) {
     return mergedArray;
 }
 
-console.log(MergeAndSort(nums1, nums2));
+console.log(mergeAndSort(nums1, nums2));
 
 
 
 // 3. Find All Duplicates in an Array
 // Question: Given an array of integers where 1 ≤ a[i] ≤ n (n = size of the array), some elements appear twice and others appear once. Write a function that returns an array of all the elements that appear twice in the given array. You must achieve this with O(n) time complexity.
 
+const int_array = [1, 2, 3, 4, 5, 5, 2, 1, 6, 7]
+
+function finAllDuplicates(arr) {
+    let duplicates = []
+    let count_dict = {}
+
+    for (let current_value of arr) {
+        if (current_value in count_dict) {
+            duplicates.push(current_value)
+        } else {
+            count_dict[current_value] = 1
+        }
+    }
+    return duplicates
+}
+console.log(finAllDuplicates(int_array));
 
 
 // 4. Rotate Array
-// Question: Rotate an array to the right by k steps, where k is non-negative. 
+// Question: Rotate an array to the right by k steps, where k is non-negative.
 
 
 
