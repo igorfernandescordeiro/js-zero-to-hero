@@ -67,7 +67,23 @@ console.log(finAllDuplicates(int_array));
 
 // 4. Rotate Array
 // Question: Rotate an array to the right by k steps, where k is non-negative.
+let start_array = [1, 2, 3, 4, 5, 6];
 
+let k = 3;
+
+let finish_array = [4, 5, 6, 1, 2, 3];
+
+function rotateArray(arr, k) {
+
+    let end_values = arr.slice(k);
+    let start_values = arr.slice(0, k);
+
+    let new_array = [...end_values, ...start_values];
+
+    return new_array;
+}
+
+console.log(rotateArray(start_array, k));
 
 
 // 5. Valid Parentheses
