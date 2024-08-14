@@ -92,3 +92,37 @@ console.log(rotateArray(start_array, k));
 // Open brackets must be closed by the same type of brackets.
 // Open brackets must be closed in the correct order.
 
+let s = "()[]{}"
+let s_2 = "([])[]]{}{]}"
+
+function validParenthesis(str) {
+    const combos = {
+        '{': '}',
+        '(': ')',
+        '[': ']'
+    }
+
+    let stack = []
+
+    for (let current_bracket of str) {
+        if (stack.length === 0) {
+            stack.push(current_bracket)
+        } else if (current_bracket in combos) {
+            stack.push(current_bracket)
+        } else {
+            let last_value_on_stack = stack[stack.length - 1]
+            if (!(last_value_on_stack in combos)) {
+                stack.push(current_bracket)
+            } else {
+                if (combos[last_value_on_stack] === current_bracket) {
+                    stack.pop()
+                }
+            }
+        }
+
+    }
+
+    return stack.length === 0
+}
+
+console.log(validParenthesis(s_2))
