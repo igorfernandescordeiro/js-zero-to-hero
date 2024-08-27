@@ -148,8 +148,40 @@
         </div>
     </main>
     <script>
+        // step 1 -  Initialize our list of todos and display the todos
 
-        
+        let mainContainer = document.querySelector('main');
+        let todo_list = ['go get groceries', 'testing'];
+
+        function paintUI() {
+
+            let new_inner_html = '';
+
+            for (let i = 0; i < todo_list.length; i++) {
+                const todo = todo_list[i];
+
+                new_inner_html += 
+                `<div class="todoItem">
+                <p>${todo}</p>
+                <div class="actionsContainer">
+                <button><i class="fa-solid fa-pen-to-square"></i></button>
+                <button><i class="fa-solid fa-trash"></i></button>
+                </div>
+                </div>`
+            }
+            mainContainer.innerHTML = new_inner_html;
+
+        };
+
+        paintUI();
+        // step 2 - Write a function that allows us to add a new todo
+
+        // step 3 - Write a function that allows us to delete a todo
+
+        // step 4 - Write a function that allows us to edit a todo
+
+        // step 5 - Persist all information
+
     </script>
 </body>
 
