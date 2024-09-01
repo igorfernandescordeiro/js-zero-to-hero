@@ -154,7 +154,7 @@
         let addBtn = document.getElementById('addBtn');
         let todoInput = document.getElementById('todoInput');
         let deleteBtn = document.getElementById('deleteBtn');
-        let todo_list = ['go get groceries', 'testing'];
+        let todo_list = localStorage.getItem('todo-list') ? JSON.parse(localStorage.getItem('todo-list')).todo_list : [];
 
         function paintUI() {
 
@@ -167,12 +167,13 @@
                 `<div class="todoItem">
                 <p>${todo}</p>
                 <div class="actionsContainer">
-                <button><i class="fa-solid fa-pen-to-square"></i></button>
+                <button onclick="editTodo(${i})"><i class="fa-solid fa-pen-to-square"></i></button>
                 <button onclick="deleteTodo(${i})"><i class="fa-solid fa-trash"></i></button>
                 </div>
                 </div>`
             }
             mainContainer.innerHTML = new_inner_html;
+            saveData();
 
         };
 
@@ -184,6 +185,7 @@
             if(!current_todo) { return }
 
             todo_list.push(current_todo);
+            todoInput.value = '';
             paintUI();
         }
 
@@ -203,7 +205,17 @@
         
         // step 4 - Write a function that allows us to edit a todo
 
+        function editTodo(index) {
+            let current_todo = todo_list[index];
+            todoInput.value = current_todo
+            deleteTodo(index);
+        }
+
         // step 5 - Persist all information
+
+        function saveData(){
+            localStorage.setItem('todo-list', JSON.stringify({todo_list}))
+        };
 
     </script>
 </body>
