@@ -10,7 +10,7 @@ async function scrapeData() {
     try {
         // step a - fetch the page html
 
-        const url = 'https://finance.yahoo.com/quote/SMAR/history/?p=SMAR'
+        const url = `https://finance.yahoo.com/quote/${stockTicker}/${type}?p=${stockTicker}`
         //`https://finance.yahoo.com/quote/${stockTicker}/${type}?p=${stockTicker}`;
         console.log(`URL: ${url}`)
 
