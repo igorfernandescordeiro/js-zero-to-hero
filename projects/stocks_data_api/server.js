@@ -65,4 +65,8 @@ app.listen(port, () => { console.log(`server has started on port: ${port}`)});
 
 // step 3 - define api endpoints to access stock data and call webscraper
 
-app.post();
+app.post('/api', (res, req) => {
+    const {ticker} = req.body
+
+    res.statusCode(200).send({ message: "sucessful"})
+});
