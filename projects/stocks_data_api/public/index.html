@@ -98,8 +98,10 @@
     </header>
     <main></main>
     <script>
-        let tickerInput = document.getElementById('ticker')
-        let sendBtn = document.querySelector('button')
+        let tickerInput = document.getElementById('ticker');
+        let sendBtn = document.querySelector('button');
+        let mainContainer = document.querySelector('main');
+
         async function fetchStockData() {
             let stock_ticker = tickerInput.value
             if (!stock_ticker) { return }
@@ -113,7 +115,11 @@
                     },
                     body: JSON.stringify({ stock_ticker })
                 }
-                const res = fetch(backend_url, options)
+                const res = await fetch(backend_url, options);
+                const { prices } = await res.json()
+                console.log(res.status);
+
+                mainContainer.innerText = prices.join('\n');
 
 
             } catch (error) {
@@ -122,6 +128,8 @@
 
             }
         }
+
+        sendBtn.addEventListener('click', fetchStockData())
     </script>
 </body>
 

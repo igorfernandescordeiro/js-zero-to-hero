@@ -6,27 +6,29 @@ let stockTicker = 'pypl';
 let type = 'history';
 
 
-async function scrapeData() {
+async function scrapeData(ticker) {
     try {
-        const url = `https://finance.yahoo.com/quote/${stockTicker}/${type}?p=${stockTicker}`
+        const url = `https://finance.yahoo.com/quote/${ticker}/${type}?p=${ticker}`
         console.log(`URL: ${url}`)
 
         const response = await fetch(url, {
             headers: {
                 'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/128.0.0.0 Safari/537.36',
                 'Origin': 'https://your-site.com',
-                'x-requested-with': 'XMLHttpRequest', 
+                'x-requested-with': 'XMLHttpRequest',
             },
         });
 
 
 
         const html = await response.text();
-     
+
 
         const $ = cheerio.load(html);
 
         const price_history = getPrices($);
+
+        return price_history;
 
         console.log(price_history);
 
@@ -59,14 +61,16 @@ app.use(express.static('public'));
 
 
 
-app.listen(port, () => { console.log(`server has started on port: ${port}`)});
+app.listen(port, () => { console.log(`server has started on port: ${port}`) });
 
 
 
 // step 3 - define api endpoints to access stock data and call webscraper
 
-app.post('/api', (res, req) => {
-    const {ticker} = req.body
+app.post('/api', async (req, res) => {
+    const { stock_ticker: ticker } = req.body
 
-    res.statusCode(200).send({ message: "sucessful"})
+    const prices = await scrapeData(ticker);
+
+    res.statusCode(200).send({ prices });
 });
